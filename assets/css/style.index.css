@@ -7,6 +7,7 @@
 }
 body{
     max-height: 110vh;
+    max-width: 100%;
 }
 iframe{
     border: none;
@@ -49,11 +50,7 @@ button:hover{
    text-align: center;
    padding: 10vh;
 }
-.petCard{
-border-radius: 18px;
-background-color: #ffffff;
-box-shadow: 11px 11px 22px #c3c3c3;
-}
+
 .hidden{
     display: none;
 }
@@ -106,7 +103,21 @@ footer{
 #footer-container{
     font-size: 15px;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    position: bottom;
+}
+/*/////////*/
+#list-container{
+    display: flex;
+}
+.petCard{
+  
+    width: 33%;
+    margin: 20px;
+}
+img{
+    border-radius: 16px;
+    max-width: 300px;
+    max-height: 300px;
 }
 

@@ -76,7 +76,7 @@ function registerPet(){
 
     registerPetList.add(pet);
     clearFields();
-    renderContent();
+   
 }
 
 class petList{
@@ -151,9 +151,11 @@ function renderContent(){
 
 function showForm(){
     document.getElementById("main-container").classList.remove("hidden");
-    document.getElementById("list-container").classList.add("hidden");
+    document.getElementById("main-listContainer").classList.add("hidden");
 }
 function showList(){
+    renderContent();
     document.getElementById("main-container").classList.add("hidden");
-    document.getElementById("list-container").classList.remove("hidden");
+    document.getElementById("main-listContainer").classList.remove("hidden");
+   
 }
