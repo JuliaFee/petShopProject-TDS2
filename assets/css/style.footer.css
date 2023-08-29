@@ -3,4 +3,12 @@
     font-family: 'Poppins';
     background-color: #1D7044;
     color: white;
+   
+}
+#main-container{
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
