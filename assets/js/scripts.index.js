@@ -48,7 +48,7 @@ class Pet{
     }
 }
 
-const petTeste = new Jogo("isabelle", "belinha", "shitzu", "21-02-2015", "link");
+const petTeste = new Pet("isabelle", "belinha", "shitzu", "21-02-2015", "link");
 console.log(petTeste);
 
 function registerPet(){
