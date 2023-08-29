@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 *{
     font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+iframe{
+    border: none;
+    width: 100%;
 }
 #input-container{
     display: flex;
@@ -16,6 +23,10 @@ button{
     padding: 10px;
     color: white;
     background-color: #1d7044;
+}
+button:hover{
+    transition: 0.3s;
+    background-color: #155031;
 }
 #main-container{
    text-align: center;
