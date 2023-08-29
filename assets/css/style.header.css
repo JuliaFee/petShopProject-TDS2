@@ -3,9 +3,24 @@
     font-family: 'Poppins';
     background-color: #1D7044;
     color: white;
+    padding: 0;
 }
 #main-container{
+   
+    display: flex;
+    flex-direction: column;
     align-items: center;
+}
+h2{
+    font-size: 35px;
+}
+h2, p{
+    margin: 0;
+}
+p{
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 5px;
 }
 #text-container{
     display: flex;
