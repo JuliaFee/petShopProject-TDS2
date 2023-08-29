@@ -102,7 +102,7 @@ function renderContent(){
     console.log(array);
 
     array.forEach(pet => {
-        const jogosDiv = `
+        const petsHTML = `
         <div class="petCard">
             <h2>Tutor: ${jogo.tutor}</h2>
             <p>Nome: ${jogo.nome}</p>
@@ -111,7 +111,7 @@ function renderContent(){
             <img src="${jogo.fotoLink}" alt="${jogo.tutor}">
         </div>
         `
-    showHTML.innerHTML += jogosDiv;
+    showHTML.innerHTML += petsHTML;
     });
 
 }
