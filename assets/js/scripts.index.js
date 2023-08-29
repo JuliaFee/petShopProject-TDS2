@@ -51,7 +51,7 @@ class Pet{
 const petTeste = new Jogo("isabelle", "belinha", "shitzu", "21-02-2015", "link");
 console.log(petTeste);
 
-function comporJogo(){
+function registerPet(){
     let tutor = document.getElementById("input-tutor").value; 
     let nome = document.getElementById("input-nome").value; 
     let especie = document.getElementById("input-especie").value; 
