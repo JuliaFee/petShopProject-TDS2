@@ -65,7 +65,6 @@ const petTeste = new Pet("isabelle", "belinha", "shitzu", "21-02-2015", "9", "li
 console.log(petTeste);
 
 function registerPet(){
-    document.getElementById("main-container").classList.remove("hidden");
     let tutor = document.getElementById("input-tutor").value; 
     let nome = document.getElementById("input-nome").value; 
     let especie = document.getElementById("input-especie").value; 
@@ -75,7 +74,7 @@ function registerPet(){
     const pet = new Pet(tutor, nome, especie, niver, fotoLink);
     console.log(pet);
 
-    registerPet.add(pet);
+    registerPetList.add(pet);
     clearFields();
     renderContent();
 }
@@ -94,9 +93,9 @@ class petList{
         }
     }
 }
-const petpet = new petList();
+const registerPetList = new petList();
 
-console.log(petpet);
+console.log(registerPetList);
 
 function clearFields(){
     document.getElementById("input-tutor").value = ''; 
@@ -109,7 +108,7 @@ function clearFields(){
 }
 
 function renderContent(){
-    document.getElementById("main-container").classList.add("hidden");
+   
     // let showHTML = document.getElementById("list-container");
     // showHTML.innerHTML = '';
 
@@ -132,7 +131,7 @@ function renderContent(){
 
     let content = '';
 
-    const array = registerPet.petList;
+    const array = registerPetList.petList;
 
     array.forEach(pet => {
          content += `
@@ -148,4 +147,13 @@ function renderContent(){
     })
 
     document.getElementById("list-container").innerHTML = content;
+}
+
+function showForm(){
+    document.getElementById("main-container").classList.remove("hidden");
+    document.getElementById("list-container").classList.add("hidden");
+}
+function showList(){
+    document.getElementById("main-container").classList.add("hidden");
+    document.getElementById("list-container").classList.remove("hidden");
 }

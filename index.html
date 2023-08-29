@@ -10,7 +10,17 @@
 </head>
 
 <body>
-    <iframe src="./layout/header.html" id="header" scrolling="no" frameborder="0"></iframe>
+    <header>
+        <div id="header-container">
+            <div id="text-container">
+                <h2 id="h2-header">Clínica Veterinária</h2>
+            </div>
+            <div id="sub-textContainer">
+                <button onclick="showForm()" id="button-header" type="button">Cadastro</button>
+                <button onclick="showList()" id="button-header" type="button">Exibição</button>
+            </div>
+        </div>
+</header>
     <div id="main-container">
         <h1>Cadastro de Pets</h1>
         <div id="input-container">
@@ -28,8 +38,12 @@
             <div id="msg"></div>
         </div>
     </div>
-    <div id="list-container"></div>
-    <iframe src="./layout/footer.html" id="footer" scrolling="no" frameborder="0"></iframe>
+    <div id="list-container" class="hidden"></div>
+    <footer>
+        <div id="footer-container">
+            <p>©2023 Clínica Veterinária Todos os direitos reservados</p>
+        </div>
+</footer>
 </body>
 
 </html>

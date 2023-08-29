@@ -5,6 +5,9 @@
     margin: 0;
 
 }
+body{
+    max-height: 110vh;
+}
 iframe{
     border: none;
     width: 100%;
@@ -60,3 +63,50 @@ box-shadow: 11px 11px 22px #c3c3c3;
 .sucesso{
     color: green;
 }
+/*///////////////////////////////*/
+
+header{
+    font-family: 'Poppins';
+    background-color: #1D7044;
+    color: white;
+    padding: 0;
+    align-items: center;
+}
+#buttonHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#h2-header{
+    font-size: 35px;
+}
+#h2-header, button{
+    margin: 0;
+}
+#button-header{
+    border: none;
+    font-size: 15px;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+#text-container{
+    display: flex;
+}
+#sub-textContainer{
+    display: flex;
+}
+/*/////////////////*/
+footer{
+        font-family: 'Poppins';
+        background-color: #1D7044;
+        color: white;
+        height: 30px;
+        padding: 20px;
+}
+#footer-container{
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
