@@ -1,10 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap');
 *{
-    font-family: 'Poppins';
-    background-color: rgb(34, 34, 36);
-    color: white;
+    font-family: 'Poppins', sans-serif;
 }
-
+#input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: aqua;
+    padding: 10px;
+}
+input, button{
+    margin: 5px;
+}
+button{
+    padding: 10px;
+    color: white;
+    background-color: #1d7044;
+}
+#main-container{
+   text-align: center;
+}
 .error{
     color: red;
 }

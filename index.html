@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" src="assets/css/style.index.css">
+    <link rel="stylesheet" href="assets/css/style.index.css">
     <script src="assets/js/scripts.index.js"></script>
-    <iframe src="./layout/header.html" id="header"></iframe>
     <title>Document</title>
 </head>
 <body>
+    <!-- <iframe src="./layout/header.html" id="header"></iframe> -->
     <div id="main-container">
+        <h1>Cadastro de Pets</h1>
         <div id="input-container">
             <label for="input-tutor">Tutor: </label>
             <input id="input-tutor">
@@ -18,13 +19,16 @@
             <label for="input-especie">Espécie: </label>
             <input id="input-especie">
             <label for="input-niver">Data de Nascimento: </label>
-            <input id="input-niver">
+            <input id="input-niver" type="date">
             <label for="input-img">Fotinha:</label>
             <input id="input-img">
-            <button onclick="registerPet()">oitudo bom</button>
+            <button onclick="registerPet()">Cadastrar</button>
+                <div id="msg">oi</div>
         </div>
     </div>
+</div>
+<div id="list-container"></div>
     
-    <iframe src="./layout/footer.html" id="footer"></iframe>
+    <!-- <iframe src="./layout/footer.html" id="footer"></iframe> -->
 </body>
 </html>

@@ -61,7 +61,7 @@ class Pet{
       }
 }
 
-const petTeste = new Pet("isabelle", "belinha", "shitzu", "21-02-2015", "link");
+const petTeste = new Pet("isabelle", "belinha", "shitzu", "21-02-2015", "9", "link");
 console.log(petTeste);
 
 function registerPet(){
@@ -108,7 +108,7 @@ function clearFields(){
 }
 
 function renderContent(){
-    const showHTML = document.getElementById("container-lista");
+    const showHTML = document.getElementById("list-container");
     showHTML.innerHTML = '';
 
     let array = registroPets.petList;
@@ -120,7 +120,8 @@ function renderContent(){
             <h2>Tutor: ${pet.tutor}</h2>
             <p>Nome: ${pet.nome}</p>
             <p>Espécie: ${pet.especie}</p>
-            <p>Idade: ${pet.niver}</p>
+            <p>Aniversário: ${pet.niver}</p>
+            <p>Idade: ${pet.age}</p>
             <img src="${pet.fotoLink}" alt="${pet.tutor}">
         </div>
         `
