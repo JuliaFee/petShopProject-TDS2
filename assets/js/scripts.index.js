@@ -3,7 +3,7 @@ console.log("Hello, World!");
 function checkInputs(){
     
 let tutor = document.getElementById("input-tutor").value; 
-let nome = document.getElementById("input-preco").value; 
+let nome = document.getElementById("input-nome").value; 
 let especie = document.getElementById("input-especie").value; 
 let niver = document.getElementById("input-niver").value; 
 let fotoLink = document.getElementById("input-img").value; 
@@ -23,9 +23,10 @@ if (tutor == '' || nome == '' || especie == '' || niver == '' || fotoLink == '' 
 }
 }
 
+const msg = "";
+
 function sendMsg(msg, type){
      let msgExib = document.getElementById("msg");
-     msgExib.innerHTML = '';
 
      let msgParaTela = `
      <p class='${type}'>${msg}</p>`
@@ -44,8 +45,20 @@ class Pet{
         this.nome = nome;
         this.especie = especie;
         this.niver = niver;
+        this.age = this.calculateAge(niver);
         this.fotoLink = fotoLink;
     }
+
+    calculateAge(niver) {
+        const newDateJS = new Date(niver);
+        const yearDate = newDateJS.getFullYear();
+    
+        const todayDate = new Date();
+        const nowDate = todayDate.getFullYear();
+    
+        const age = nowDate - yearDate;
+        return age
+      }
 }
 
 const petTeste = new Pet("isabelle", "belinha", "shitzu", "21-02-2015", "link");
@@ -58,7 +71,7 @@ function registerPet(){
     let niver = document.getElementById("input-niver").value; 
     let fotoLink = document.getElementById("input-img").value; 
 
-    const pet = new Jogo(tutor, nome, especie, niver, fotoLink);
+    const pet = new Pet(tutor, nome, especie, niver, fotoLink);
     console.log(pet);
 
     registroPets.add(pet);
@@ -71,11 +84,11 @@ class petList{
         this.petList = [];
     }
     add(parametro){
-        if(verificarInputs()){
+        if(checkInputs()){
             sendMsg("Preencha todos os campos", "error");
         } else{
         this.petList.push(parametro);
-        sendMsg("Cadastrado com sucesso", "sucesso");
+        sendMsg("Pet cadastrado com sucesso", "sucesso");
         console.log(this.petList)
         }
     }
@@ -104,11 +117,11 @@ function renderContent(){
     array.forEach(pet => {
         const petsHTML = `
         <div class="petCard">
-            <h2>Tutor: ${jogo.tutor}</h2>
-            <p>Nome: ${jogo.nome}</p>
-            <p>Espécie: ${jogo.especie}</p>
-            <p>Idade: ${jogo.niver}</p>
-            <img src="${jogo.fotoLink}" alt="${jogo.tutor}">
+            <h2>Tutor: ${pet.tutor}</h2>
+            <p>Nome: ${pet.nome}</p>
+            <p>Espécie: ${pet.especie}</p>
+            <p>Idade: ${pet.niver}</p>
+            <img src="${pet.fotoLink}" alt="${pet.tutor}">
         </div>
         `
     showHTML.innerHTML += petsHTML;
