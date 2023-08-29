@@ -38,7 +38,7 @@ function sendMsg(msg, type){
 
 }
 
-class Jogo{
+class Pet{
     constructor(tutor, nome, especie, niver, fotoLink){
         this.tutor = tutor;
         this.nome = nome;
