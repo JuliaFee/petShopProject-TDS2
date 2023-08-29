@@ -11,7 +11,10 @@ iframe{
     height: 100px;
 }
 #footer{
-    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    position: bottom;
 }
 #input-container{
     display: flex;
@@ -41,6 +44,15 @@ button:hover{
 }
 #main-container{
    text-align: center;
+   padding: 10vh;
+}
+.petCard{
+border-radius: 18px;
+background-color: #ffffff;
+box-shadow: 11px 11px 22px #c3c3c3;
+}
+.hidden{
+    display: none;
 }
 .error{
     color: red;

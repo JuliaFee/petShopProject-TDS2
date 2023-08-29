@@ -65,6 +65,7 @@ const petTeste = new Pet("isabelle", "belinha", "shitzu", "21-02-2015", "9", "li
 console.log(petTeste);
 
 function registerPet(){
+    document.getElementById("main-container").classList.remove("hidden");
     let tutor = document.getElementById("input-tutor").value; 
     let nome = document.getElementById("input-nome").value; 
     let especie = document.getElementById("input-especie").value; 
@@ -74,7 +75,7 @@ function registerPet(){
     const pet = new Pet(tutor, nome, especie, niver, fotoLink);
     console.log(pet);
 
-    registroPets.add(pet);
+    registerPet.add(pet);
     clearFields();
     renderContent();
 }
@@ -93,9 +94,9 @@ class petList{
         }
     }
 }
-const registroPets = new petList();
+const petpet = new petList();
 
-console.log(registroPets);
+console.log(petpet);
 
 function clearFields(){
     document.getElementById("input-tutor").value = ''; 
@@ -108,24 +109,43 @@ function clearFields(){
 }
 
 function renderContent(){
-    const showHTML = document.getElementById("list-container");
-    showHTML.innerHTML = '';
+    document.getElementById("main-container").classList.add("hidden");
+    // let showHTML = document.getElementById("list-container");
+    // showHTML.innerHTML = '';
 
-    let array = registroPets.petList;
-    console.log(array);
+    // let array = registerPet.petList;
+    // console.log(array);
+
+    // array.forEach(pet => {
+    //     const petsHTML = `
+    //     <div class="petCard">
+    //         <h2>Tutor: ${pet.tutor}</h2>
+    //         <p>Nome: ${pet.nome}</p>
+    //         <p>Espécie: ${pet.especie}</p>
+    //         <p>Aniversário: ${pet.niver}</p>
+    //         <p>Idade: ${pet.age}</p>
+    //         <img src="${pet.fotoLink}" alt="${pet.tutor}">
+    //     </div>
+    //     `
+    // showHTML.innerHTML += petsHTML;
+    // });
+
+    let content = '';
+
+    const array = registerPet.petList;
 
     array.forEach(pet => {
-        const petsHTML = `
-        <div class="petCard">
-            <h2>Tutor: ${pet.tutor}</h2>
-            <p>Nome: ${pet.nome}</p>
-            <p>Espécie: ${pet.especie}</p>
-            <p>Aniversário: ${pet.niver}</p>
-            <p>Idade: ${pet.age}</p>
-            <img src="${pet.fotoLink}" alt="${pet.tutor}">
-        </div>
-        `
-    showHTML.innerHTML += petsHTML;
-    });
+         content += `
+         <div class="petCard">
+             <h2>Tutor: ${pet.tutor}</h2>
+             <p>Nome: ${pet.nome}</p>
+             <p>Espécie: ${pet.especie}</p>
+             <p>Aniversário: ${pet.niver}</p>
+             <p>Idade: ${pet.age}</p>
+             <img src="${pet.fotoLink}" alt="${pet.tutor}">
+         </div>
+         `
+    })
 
+    document.getElementById("list-container").innerHTML = content;
 }
