@@ -63,24 +63,24 @@ function registerPet(){
 
     registroPets.add(pet);
     clearFields();
-    renderizarConteudo();
+    renderContent();
 }
 
-class ListaJogos{
+class petList{
     constructor(){
-        this.listaJogos = [];
+        this.petList = [];
     }
     add(parametro){
         if(verificarInputs()){
-            envieMsg("Preencha todos os campos", "error");
+            sendMsg("Preencha todos os campos", "error");
         } else{
-        this.listaJogos.push(parametro);
-        envieMsg("Cadastrado com sucesso", "sucesso");
-        console.log(this.listaJogos)
+        this.petList.push(parametro);
+        sendMsg("Cadastrado com sucesso", "sucesso");
+        console.log(this.petList)
         }
     }
 }
-const registroPets = new ListaJogos();
+const registroPets = new petList();
 
 console.log(registroPets);
 
@@ -94,11 +94,11 @@ function clearFields(){
     console.log("função de limpar inputs executada");
 }
 
-function renderizarConteudo(){
-    const listaHTML = document.getElementById("container-lista");
-    listaHTML.innerHTML = '';
+function renderContent(){
+    const showHTML = document.getElementById("container-lista");
+    showHTML.innerHTML = '';
 
-    let array = registroPets.listaJogos;
+    let array = registroPets.petList;
     console.log(array);
 
     array.forEach(pet => {
@@ -111,7 +111,7 @@ function renderizarConteudo(){
             <img src="${jogo.fotoLink}" alt="${jogo.tutor}">
         </div>
         `
-    listaHTML.innerHTML += jogosDiv;
+    showHTML.innerHTML += jogosDiv;
     });
 
 }
